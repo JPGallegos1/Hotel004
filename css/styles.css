@@ -1,0 +1,344 @@
+:root {
+    --fuente-principal: 'Lato', sans-serif;
+    --primario: #214eaf;
+    --oscuro: #484848;
+    --claro: #eee;
+    --hospedaje: #275154;
+    --concierto: #c059da;
+    --clase: #3bc063;
+    --paseo: #d40aca;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--fuente-principal);
+}
+
+h1{
+    font-size: 2.6rem;
+    font-weight: 400;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+/* Colores */
+.hospedaje{
+    color: var(--hospedaje);
+}
+
+.concierto{
+    color: var(--concierto);
+}
+
+.clase{
+    color: var(--clase);
+}
+
+.paseo{
+    color: var(--paseo);
+}
+
+/* @media screen and (min-width: 550px){
+
+} */
+
+/* Interfaz */
+
+.contenedor{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero{
+    height: 100vh;
+    background-image: url(../img/hotel1.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: grid;
+    grid-template-rows: 1fr, 2fr;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-self: start;
+    align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.header .logo img{
+    height: 3rem;
+}
+.navegacion a{
+    color: var(--claro);
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.navegacion a:last-of-type{
+    margin: 0;
+}
+
+.contenido-hero{
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: max-content auto;
+}
+
+.contenido-hero h1{
+    grid-column: 2 / 3;
+    color: var(--claro);
+}
+
+.contenido-hero form{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    position: relative;
+    display: flex;
+    height: 4rem;
+}
+
+form input[type="text"]{
+    flex: 1;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-image: url(../img/lupa.png);
+    background-repeat: no-repeat;
+    background-position: calc(1% + 1rem) calc(2% + .8rem);
+    padding-left: 5rem;
+    font-size: 1.6rem;
+}
+
+form input[type="submit"]{
+    position: absolute;
+    right: 1rem;
+    top: .6rem;
+    padding: .7rem 2rem;
+    border: none;
+    background-color: var(--primario);
+    color: var(--claro);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+form input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+.boton{
+    background-color: var(--claro);
+    display: block;
+    padding: 1rem;
+    color: var(--oscuro);
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-box-shadow: 0px 13px 19px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 13px 19px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 13px 19px -10px rgba(0,0,0,0.75);
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.boton:hover{
+    background-color: var(--primario);
+    color: var(--claro);
+}
+
+.btn-flotante{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--claro);
+    color: var(--oscuro);
+    padding: .5rem 2rem;
+    text-decoration: none;
+    -webkit-box-shadow: 0px 13px 19px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 13px 19px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 13px 19px -10px rgba(0,0,0,0.75);
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+
+.btn-flotante:hover{
+    background-color: var(--primario);
+    color: var(--claro);
+}
+
+.btn-flotante.activo{
+    background-color: var(--primario);
+    color: var(--claro);
+}
+
+/* Contenido principal */
+
+.modulo{
+    margin: 0 .5rem;
+}
+
+.modulo span{
+    text-transform: uppercase;
+    color: var(--primario);
+}
+
+.modulo span.activities{
+    text-transform: lowercase;
+}
+
+.contenedor-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+}
+
+.card img{
+    width: 100%;
+}
+
+.info .categoria{
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.info .titulo{
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.info .precio{
+    color: var(--oscuro);
+    font-size: .9rem;
+}
+
+/* Premium */
+.premium{
+    background-image: url(../img/hospedaje-pro.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    grid-template-columns: unset;
+    height: 30rem;
+}
+
+@media screen and (min-width: 768px){
+    .premium{
+        grid-template-columns: auto 30%;
+    }
+
+    .premium .info{
+        grid-column: 2 / 3;
+    }
+}
+
+.premium .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.premium .info h3{
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+@media screen and (min-width: 768px){
+    .premium .info h3{
+        text-align: right;
+    }
+}
+
+/* Destinos populares */
+
+.destinos .contenedor-cards{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.destinos .card {
+    position: relative;
+}
+
+.destinos .info {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.destinos .info .titulo{
+    font-size: 1.8rem;
+    color: var(--claro);
+}
+
+/* Footer */
+
+.footer{
+    position: fixed;
+    bottom: -100%;
+    background-color: var(--claro);
+    width: 100%;
+    -webkit-box-shadow: 0px -11px 24px -10px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px -11px 24px -10px rgba(0,0,0,0.4);
+    box-shadow: 0px -11px 24px -10px rgba(0,0,0,0.4);
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    padding: 4rem 0;
+}
+
+.footer.activo{
+    bottom: 0;
+}
+
+.nav-footer{
+    padding: 1rem;
+}
+
+.nav-footer h3{
+    font-size: 1.2rem;
+}
+
+.nav-footer a{
+    display: block;
+    margin-bottom: .5rem;
+    text-decoration: none;
+    color: var(--oscuro);
+}
+
+.nav-footer a:last-of-type{
+    margin: 0;
+}
+
